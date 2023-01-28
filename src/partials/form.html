@@ -1,27 +1,25 @@
 <div class="menu">
   <div class="container">
     <div class="form-wrapper">
-      <div class="theme-switch">
-        <span class="theme-switch__icon"> Load More Button </span>
+      <div class="switch">
+        <span class="switch__icon switch__icon--btn active">
+          Load More Button
+        </span>
 
-        <div class="theme-switch__control">
+        <div class="switch__control">
           <input
-            class="theme-switch__toggle"
+            class="switch__toggle"
             type="checkbox"
             name="theme"
-            id="theme-switch-toggle"
+            id="switch-toggle"
             aria-label="Switch between 'load-more-btn' and 'infinite scroll'"
           />
-          <label
-            aria-hidden="true"
-            class="theme-switch__track"
-            for="theme-switch-toggle"
-          >
+          <label aria-hidden="true" class="switch__track" for="switch-toggle">
           </label>
-          <div aria-hidden="true" class="theme-switch__marker"></div>
+          <div aria-hidden="true" class="switch__marker"></div>
         </div>
 
-        <span class="theme-switch__icon"> Infinite Scroll</span>
+        <span class="switch__icon switch__icon--scroll"> Infinite Scroll</span>
       </div>
 
       <form class="search-form" id="search-form">

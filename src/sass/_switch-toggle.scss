@@ -1,16 +1,16 @@
-.theme-switch {
+.switch {
   display: flex;
   column-gap:8px ;
   align-items: center;
 }
 
-.theme-switch__icon {
-  color: currentColor;
+.switch__icon {
+  // color: currentColor;
   font-weight: 700;
 
 }
 
-.theme-switch__control {
+.switch__control {
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -22,7 +22,7 @@ height: 32px;
   padding: 3px 0;
 }
 
-.theme-switch__toggle {
+.switch__toggle {
   position: absolute;
   left: 0;
   top: 0;
@@ -34,7 +34,7 @@ height: 32px;
   pointer-events: none;
 }
 
-.theme-switch__track {
+.switch__track {
   position: absolute;
   left: 0;
   top: 0;
@@ -48,7 +48,7 @@ height: 32px;
   cursor: pointer;
 }
 
-.theme-switch__marker {
+.switch__marker {
   position: relative;
   background-color: #fff;
   width: 26px;
@@ -61,15 +61,21 @@ height: 32px;
   transition: transform 250ms cubic-bezier(.17, .67, .83, .67);
 }
 
-.theme-switch__toggle:checked+.theme-switch__track {
+.switch__toggle:checked+.switch__track {
   background-color: #f74e68;
 }
 
-.theme-switch__toggle:checked~.theme-switch__marker {
+.switch__toggle:checked~.switch__marker {
   transform: translateX(35px);
 }
 
-.theme-switch__toggle:focus+.theme-switch__track,
-.theme-switch__toggle:active+.theme-switch__track {
+.switch__toggle:focus+.switch__track,
+.switch__toggle:active+.switch__track {
   box-shadow: 0 0 0 3px #e0465d;
+}
+
+.active {
+color: red;
+
+font-weight: 900;
 }

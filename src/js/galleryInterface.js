@@ -5,5 +5,7 @@ export function insertGalleryMarkup(galleryMarkup) {
 }
 
 export function cleanPreviousSearchResults() {
-  refs.galleryListEl.innerHTML = '';
+  if (refs.galleryListEl.innerHTML) {
+    refs.galleryListEl.innerHTML = '';
+  }
 }
