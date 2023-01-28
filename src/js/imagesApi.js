@@ -6,7 +6,7 @@ export class ImagesAPI {
   #page = 1;
   #query = '';
   #totalResults = 0;
-  #per_page = 200;
+  #per_page = 40;
 
   getImages() {
     const searchParams = {
@@ -35,7 +35,7 @@ export class ImagesAPI {
     this.#totalResults = total;
   }
 
-  hasMorePhotos() {
+  hasMoreImages() {
     return this.#page < Math.ceil(this.#totalResults / this.#per_page);
   }
 

@@ -14,23 +14,26 @@ function createImageCardMarkup(imageInfo) {
   } = imageInfo;
   return `
 
-<div class="photo-card">
-<a class="photo-link" href="${largeImageURL}">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
-  <div class="info">
-    <p class="info-item">
-      <b>Likes</b>${likes}
-    </p>
-    <p class="info-item">
-      <b>Views</b>${views}
-    </p>
-    <p class="info-item">
-      <b>Comments</b>${comments}
-    </p>
-    <p class="info-item">
-      <b>Downloads</b>${downloads}
-    </p>
-  </div>
+<li class="gallery__item">
+<a class="photo-link"  href="${largeImageURL}">
+    <div class="photo-card">
+      <img
+        src="${webformatURL}"
+        class="gallery__image"
+        alt="${tags}"
+        loading="lazy"
+      />
+      <div class="info-wrapper">
+       <div class="info">
+        <p class="info-item"><i class="material-icons icon" >thumb_up</i>${likes}</p>
+        <p class="info-item"><i class="material-icons icon" >visibility</i>${views}</p>
+        <p class="info-item"><i class="material-icons icon" >message</i>${comments}</p>
+        <p class="info-item"><i class="material-icons icon" >file_download</i>${downloads}</p>
+      </div>
+      </div>
+     
+    </div>
   </a>
-</div>`;
+  </li>
+`;
 }
